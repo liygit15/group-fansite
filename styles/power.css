@@ -1,0 +1,144 @@
+.body-power-out {
+  background: url('../images/power/night-star.jpg');
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #3b2b4a;
+  margin: 0;
+}
+
+.power-page{
+    background: url('../images/power/backgroundxinh.jpg')
+}
+
+header {
+  background: transparent;
+  text-align: center;
+  padding: 1.5rem 1rem 0.5rem;
+}
+
+header h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2.2rem;
+  color: #3c2d7c;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #5036a9;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main layout */
+.power-page {
+  max-width: 960px;
+  margin: 2rem auto 3rem;
+  padding: 0 1.5rem 2rem;
+}
+
+.power-title {
+  font-size: 2.1rem;
+  text-align: center;
+  color: #3c2d7c;
+  margin-bottom: 0.25rem;
+}
+
+.power-subtitle {
+  text-align: center;
+  margin: 0 0 1.75rem;
+  color: #6a5a8c;
+  font-size: 0.98rem;
+}
+
+/* Cards wrapper */
+.scouts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Individual card */
+.scout-card {
+  display: flex;
+  gap: 1.5rem;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 10px 25px rgba(61, 37, 142, 0.12);
+  align-items: flex-start;
+}
+
+.scout-figure {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.scout-img {
+  width: 140px;
+  height: auto;
+  border-radius: 999px;
+}
+
+.scout-img-wide {
+  width: 160px;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* Text area */
+.scout-text {
+  flex: 1;
+}
+
+.scout-name {
+  margin: 0 0 0.2rem;
+  font-size: 1.35rem;
+  color: #3c2d7c;
+}
+
+.scout-role {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f27a3c;
+}
+
+.scout-desc {
+  margin: 0 0 0.5rem;
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.scout-powers {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.scout-powers strong {
+  color: #285ea8;
+}
+
+/* Team card tweaks */
+.team-card .scout-role {
+  color: #2e9c5d;
+}
+
+/* Footer */
+.power-footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: #7b6da8;
+}

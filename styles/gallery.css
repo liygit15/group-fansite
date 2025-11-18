@@ -1,0 +1,211 @@
+body {
+        background:
+            linear-gradient(180deg, #071a3a 0%, #001025 100%);
+        background-attachment: fixed;
+        background-size: cover;
+        color: #f6eaff;
+    font-family: "Copperplate", Arial, Helvetica, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Repeatable star tile layer (first layer) using a pseudo-element so opacity is adjustable */
+body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 0; /* behind page content (which uses z-index:1) */
+        pointer-events: none;
+        background-image: url("../images/gallery/stars-tile.svg");
+        background-repeat: repeat;
+        background-position: 36px 62px;
+        /* control the density of the tile here */
+        background-size: 200px 200px;
+        opacity: 0.5; /* adjust this value to make stars more or less visible */
+        mix-blend-mode: screen; /* lightens the stars over the dark background */
+        /* subtle twinkle animation for the tiled stars */
+        filter: blur(0.4px) saturate(1.05);
+        animation: twinkleLayer 4.7s ease-in-out infinite;
+}
+
+
+/* keep content above the decorative layers */
+header, main, footer, .gallery, .card { position: relative; z-index: 1; }
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.92; }
+    50% { opacity: 1; }
+}
+
+@keyframes floatNebula {
+    0% { transform: translate3d(0,0,0); }
+    50% { transform: translate3d(20px,-10px,0); }
+    100% { transform: translate3d(0,0,0); }
+}
+
+/* Additional twinkle animation for layered, desynchronized star blinking */
+@keyframes twinkleLayer {
+    0% { opacity: 0.28; }
+    30% { opacity: 0.62; }
+    60% { opacity: 0.36; }
+    100% { opacity: 0.72; }
+}
+
+main {
+    text-align: center;
+    padding: 2rem 1rem 4rem;
+}
+
+/* Page headings */
+h1 {
+    font-family: "Brush Script MT", Arial, Helvetica, sans-serif;
+    font-size: 3.5rem;
+    color: #e6d4ff;
+    text-shadow:
+        0 0 6px #e6d4ff,
+        0 0 12px #e9e1f5bf,
+        0 0 26px rgba(107,47,168,0.45),
+        0 0 48px rgba(255,140,200,0.18);
+    filter: drop-shadow(0 0 12px #e9e1f5bf);
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.4), 0 0 8px rgba(255,180,220,0.12);
+    margin-top: 4rem;
+}
+a {
+    color: #bda2f8;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2 {
+    color: #fff; 
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.1rem;
+    align-items: start;
+    margin: 0.75rem auto;
+    max-width: 1200px;
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250,245,255,0.96));
+    border: 2px solid rgba(68, 47, 133, 0.261);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(11,10,40,0.45), 0 0 12px rgba(202,160,255,0.03);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(11,10,40,0.55), 0 0 30px rgba(255,140,200,0.09);
+}
+
+.card-header {
+    background: linear-gradient(90deg, #06102a 0%, #1a0a2f 100%);
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+    padding: 0.8rem 0.6rem;
+    font-size: 1.05rem;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+}
+
+.card-image {
+    background: transparent;
+    padding: 0.8rem 0.9rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-image img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 6px;
+    border: 6px solid rgba(255,255,255,0.03);
+}
+
+.card-body {
+    background: rgba(245,250,255,0.92);
+    padding: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-top: auto;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.6rem;
+    border-top: 1px solid rgba(10,10,30,0.04);
+}
+
+.card-row strong {
+    color: #08102a; /* deep navy label */
+    font-weight: 700;
+}
+
+.card-row span {
+    color: #6b2fa8; /* magical purple for values/links */
+}
+
+/* subtle accent line beneath card image area */
+.card + .card, .card {
+    outline: 2px solid rgba(107,47,168,0.03);
+}
+
+footer p {
+    color: #e6d4ff;
+    margin-top: 2rem;
+}
+
+.img-swap {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px; /* 与图片圆角一致 */
+  cursor: pointer;
+}
+
+.img-swap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 260ms ease, transform 260ms ease;
+  backface-visibility: hidden;
+}
+
+/* 默认前景可见，背景隐藏 */
+.img-swap .img-front { opacity: 1; transform: scale(1); position: relative; z-index: 2; }
+.img-swap .img-back  { opacity: 0; transform: scale(1.03); position: absolute; inset: 0; top: 0; left: 0; z-index: 1; }
+
+/* 鼠标 hover 或 聚焦 时切换（键盘可访问） */
+.img-swap:hover .img-front,
+.img-swap:focus-within .img-front,
+.img-swap.hover .img-front { opacity: 0; transform: scale(0.98); }
+
+.img-swap:hover .img-back,
+.img-swap:focus-within .img-back,
+.img-swap.hover .img-back { opacity: 1; transform: scale(1); }
+
+@media (max-width: 860px) {
+    .gallery { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .card-image img { max-width: 260px; }
+}
+
+@media (max-width: 560px) {
+    .card-header { font-size: 1rem; }
+    .card-image img { max-width: 220px; }
+    main { padding: 1rem 0.6rem 3rem; }
+}

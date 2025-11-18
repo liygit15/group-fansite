@@ -1,30 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <h1>Dog Fansite</h1>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="facts.html">Dog Facts</a></li>
-        <li><a href="gallery.html">Dog Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Fun facts about dogs</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla ad vel earum odio adipisci ullam explicabo, deserunt rerum odit similique ea enim natus officia facilis vero, eaque aliquam, eveniet eum.</p>
-    </section>
-  </main>
-  <footer>
-    &copy;2025 Ada Developers Academy Cohort 24
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sailor Moon facts page</title>
+    <!-- Link to Style Sheet -->
+    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../styles/facts.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>🌙 Sailor Moon Facts ✨</h1>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="has-dropdown">
+            <a href="facts.html" class="active">Sailor Moon Facts</a>
+            <ul class="dropdown">
+              <li>
+                <a href="fanfics.html">Fanfics</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="gallery.html">Sailor Moon Gallery</a>
+          </li>
+          <li>
+            <a href="vote.html">Sailor Moon Vote</a>
+          </li>
+          <li>
+            <a href="power.html">Sailor Moon Power</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="intro container">
+        <h2>Things You Didn't Know About Sailor Moon</h2>
+      </section>
+      <!-- GRID OF FACT CARDS -->
+      <div class="cards-grid container">
+        <!-- 1: FASHION -->
+        <article class="fact-card card-yellow">
+          <h2>High Fashion In Sailor Moon</h2>
+          <div class="inner-panel">
+            <div class="text">
+              <p>
+                Naoko Takeuchi, the author of Sailor Moon, was a big fan of fashion and luxury brands
+                including Chanel, Mugler, Dior, Versace, and more.
+                This heavily influenced her manga and many character designs.
+                For excample princess Serenity’s dress was inspired by a 1992 Dior design.
+              </p>
+            </div>
+            <div class="image">
+              <img src="../images/facts/dress.png" alt="Serenity dress ">
+            </div>
+          </div>
+        </article>
+        <!-- 2: REI HINO -->
+        <article class="fact-card card-lilac">
+          <h2>Behind Rei Hino’s Character</h2>
+          <div class="inner-panel">
+            <div class="text">
+              <p>
+                Rei Hino’s role as a shrine maiden comes directly from creator Naoko Takeuchi’s real life.
+                While in college, Takeuchi worked as a miko at the Shiba Daijingu Shrine, helping with weddings and ceremonies. 
+                She used those experiences to shape Rei’s calm, dedicated, and spiritual personality.
+              </p>
+            </div>
+            <div class="image">
+              <img src="../images/facts/miko.png" alt="Behind Rei Hino’s Character">
+            </div>
+          </div>
+        </article>
+        <!-- 3: USAGI'S BROTHER -->
+        <article class="fact-card card-blue">
+          <h2>Naoko’s Brother Became an Anime Character</h2>
+          <div class="inner-panel">
+            <div class="text">
+              <p>
+                Shingo, Usagi’s playful and sassy little brother, 
+                is actually based on Naoko Takeuchi’s real younger brother, also named Shingo! 
+                Just like in the show, he loved shonen manga and Nintendo. 
+                Usagi’s whole family was inspired by Naoko’s own childhood home.
+              </p>
+            </div>
+            <div class="image">
+              <img src="../images/facts/shingo.png" alt="Usagi's brother Shingo">
+            </div>
+          </div>
+        </article>
+        <!-- 4: SAILOR MOON PGSM -->
+        <article class="fact-card card-pink">
+          <h2>Sailor Moon Live Action</h2>
+          <div class="inner-panel">
+            <div class="text">
+              <p>
+                Pretty Guardian Sailor Moon (PGSM) is a Japanese live-action TV series based on the Sailor Moon manga.
+                It aired from 2003 to 2004 and featured real actors.
+                The show had its own unique storylines and character developments, making it a special adaptation for fans.
+              </p>
+            </div>
+            <div class="image">
+              <img src="../images/facts/PGSM.png" alt="Usagi happily eating a donut">
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
 </html>

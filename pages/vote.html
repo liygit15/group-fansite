@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sailor Moon Vote</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/vote.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="icon" href="../images/logo.png">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="../images/vote/logo3.webp" alt="logo">
+        <h1> Vote for your favorite character!</h1>
+        <nav class="nav">
+            <ul class="main-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li class="pipe">|</li>
+                <li><a href="facts.html">Sailor Moon Facts</a></li>
+                <li class="pipe">|</li>
+                <li><a href="gallery.html">Sailor Moon Gallery</a></li>
+                <li class="pipe">|</li>
+                <li><a href="vote.html"><strong>Sailor Moon Vote</strong></a></li>
+                <li class="pipe">|</li>
+                <li><a href="power.html">Sailor Moon Power</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="vote-body">
+            <h2 id="vote-title">  
+                <span class="gradient-text"> Who do you like the most? </span>
+                <span class="gradient-text">  Give her your love! </span>
+            </h2>
+            <form method="post" name="vote_form">
+                <fieldset>
+                    <label class="candidate">
+                        <img src="../images/vote/Sailor_Moon2.jpg" alt="Sailor Moon"  >
+                        <input type="radio" name="favorite" value="moon" >
+                        <span class="sailor-name">Sailor Moon</span>
+                    </label>
+
+                    <label class="candidate">
+                        <img src="../images/vote/Sailor_Mercury2.jpg" alt="Sailor Mercury"  >
+                        <input type="radio" name="favorite" value="mercury">
+                        <span class="sailor-name">Sailor Mercury</span>
+                    </label>
+
+                    <label class="candidate">
+                        <img src="../images/vote/Sailor_Mars1.jpg" alt="Sailor Mars"  >
+                        <input type="radio" name="favorite" value="mars"> 
+                        <span class="sailor-name">Sailor Mars</span>
+                    </label>
+
+                    <label class="candidate">
+                        <img src="../images/vote/Sailor_Jupiter6.jpg" alt="Sailor Jupiter"  >
+                        <input type="radio" name="favorite" value="jupiter"> 
+                        <span class="sailor-name">Sailor Jupiter</span>
+                    </label>
+
+                    <label class="candidate">
+                        <img src="../images/vote/Sailor_Venus1.jpg" alt="Sailor Venus"  >
+                        <input type="radio" name="favorite" value="venus"> 
+                        <span class="sailor-name">Sailor Venus</span>
+                    </label>
+
+                    <label class="candidate">
+                        <img src="../images/vote/Sailor_Neptune1.jpg" alt="Sailor Neptune"  >
+                        <input type="radio" name="favorite" value="neptune"> 
+                        <span class="sailor-name">Sailor Neptune</span>
+                    </label>
+
+                    <label class="candidate">
+                        <img src="../images/vote/Sailor_Uranus.jpg" alt="Sailor Uranus"  >
+                        <input type="radio" name="favorite" value="uranus"> 
+                        <span class="sailor-name">Sailor Uranus</span>
+                    </label>
+
+                    <label class="candidate">
+                        <img src="../images/vote/Sailor_Pluto2.jpg" alt="Sailor Pluto"  >
+                        <input type="radio" name="favorite" value="pluto"> 
+                        <span class="sailor-name">Sailor Pluto</span>
+                    </label>
+
+                </fieldset>
+                <button type="submit">Vote</button>
+            </form>
+
+            <section id="result">
+                <h2 id="result-title">👑 vote result: Sailor Pluto wins! 👑</h2>
+                <ul id="results-list">
+                    <li class="vote-result">Sailor Moon: <strong>52 votes</strong></li>
+                    <li class="vote-result">Sailor Mercury: <strong>50 votes</strong></li>
+                    <li class="vote-result">Sailor Mars:<strong>25 votes</strong></li>
+                    <li class="vote-result">Sailor Jupiter: <strong>32 votes</strong></li>
+                    <li class="vote-result">Sailor Venus: <strong>60 votes</strong></li>
+                    <li class="vote-result">Sailor Neptune: <strong>70 votes</strong></li>
+                    <li class="vote-result">Sailor Uranus: <strong>30 votes</strong></li>
+                    <li class="vote-result">Sailor Pluto: <strong>70 votes</strong></li>
+                </ul>
+            </section>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Team E.L.S.A. — Made with ❤️ and Moonlight 🌙</p>
+    </footer>
+</body>
+
+</html>

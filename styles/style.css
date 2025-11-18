@@ -1,26 +1,99 @@
 h1 {
-    color:green;
-    font-family: fantasy;
+    color: #FF8ACB;
 }
 
-.short-bio p {
-    border: 1px black solid;
-    padding: 5em
-}
-
-body {
-    /* align-items: center; */
-    text-align: center;
+a {
+    color: #A277FF;
+    text-decoration: none;
 }
 
 li {
     display: inline;
-    margin: 14px;
+    margin: 0 5px;
 }
 
+body {
+    background-color: #ffe6f9;
+    text-align: center;
+}
 
-footer {
-    color:purple;
-    margin-top: 100px;
-    font-weight: bold;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    background-color: #fff0fa;
+    width: 70%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid pink;
+}
+
+h2 {
+    color: #A277FF
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+figure {
+    margin: 10px;
+    text-align: center;
+}
+
+footer p {
+    color: #A277FF;
+}
+
+.sailor-img {
+    width: 250px;
+    height: 375px;
+}
+
+.sailor-img-wide {
+    height: 375px;
+}
+
+.swap-img {
+    position: relative;
+    width: 250px;
+    height: 375px;
+}
+
+/*stacks both images on top of each other*/
+.swap-img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img-hover {
+    opacity: 0;
+}
+
+.swap-img:hover .img-default {
+    opacity: 0;
+}
+
+.swap-img:hover .img-hover {
+    opacity: 1;
+}
+
+/* visually-hidden utility for screen readers */
+.sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
 }

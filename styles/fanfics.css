@@ -1,0 +1,307 @@
+/*animated background – “moving pastel sky”*/
+body {
+  background: linear-gradient(135deg, #ffd6f5, #ffe9ff, #fff5d1, #e2d8ff);
+  background-size: 300% 300%;
+  animation: bg-shift 18s ease-in-out infinite;
+  position: relative;      /* so ::before can be positioned */
+  overflow-x: hidden;      /* avoids scroll bar from decoration */
+  font-family: Georgia, serif;
+  color: #3C2D7C;
+  margin: 0;
+}
+
+header{
+  background-color: #8b6cf1;
+  text-align: center;
+  padding: 1rem 0 0; /* top padding only, no bottom padding so nav sits flush */ 
+}
+
+h1 {
+  color: #F4E48C;
+  font-size: 3rem;
+}
+
+h2 {
+  color: #3C2D7C;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;   /* ← adds spacing between menu items */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul {
+  gap: 2rem;
+}
+
+header nav {
+margin: 0 auto; /* center nav */
+background-color: #634CC0;
+padding: 0.9rem 0; /* vertical padding inside nav */
+}
+
+li, a{
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* Dropdown menu styles */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.4rem 0.6rem;
+}
+
+nav a.active {
+  font-weight: 700;
+}
+
+.has-dropdown .dropdown a {
+  font-size: 1.1rem;    /* match main menu size */
+}
+
+/* dropdown base (hidden) */
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown .dropdown {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;        /* right under the parent li */
+  left: 0;
+  width: 100%;         /* match parent li width */
+  min-width: 160px;
+  background: #634CC0;
+  border-radius: 0.5rem;
+  display: none;    /* hidden by default */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.has-dropdown .dropdown li a {
+  display: block;
+  padding: 0.4rem 0.6rem;
+}
+
+/* show dropdown on hover */
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+@keyframes bg-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Card grid ===== */
+.cards-grid {
+  /* add top padding so the top row of cards has breathing room */
+  padding: 1.2rem 1.2rem 2rem;
+  display: grid;
+  /* keep two columns on wider screens */
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1.8rem;
+  border-radius: 26px;
+  padding-top: 0;
+}
+
+.container {
+  box-sizing: border-box; 
+  width: 70%;             
+  margin-left: auto;      
+  margin-right: auto;
+  max-width: 1000px;
+  margin: 0 auto 1.1rem;
+  border-width: 0px;
+}
+
+
+/* ===== Comic book viewer ===== */
+
+/* Hide just the radio buttons inside the comic wrapper */
+.comic-wrapper input[type="radio"] {
+  display: none;
+}
+
+/* Main comic area */
+.comic-wrapper {
+  width: 100%;
+  max-width: 1500px;
+  margin: 2rem auto 3rem;  /* ✔ restore spacing above the book */
+  padding: 1rem;
+  text-align: center;
+}
+
+.comic-heading {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #3C2D7C; /* matches your palette */
+}
+
+/* Layout: arrows on each side, book in the middle */
+.book-frame {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* arrows — book — arrows */
+  align-items: center;
+  width: 100%;  /* full width */
+  margin: 0 auto;
+}
+
+/* ensure no visible border or shadow around the book frame */
+.book-frame {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Arrows (Prev / Next) – <label> elements */
+.nav-arrow {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: 0.1s;
+}
+
+/* LEFT arrow image */
+.nav-prev {
+  background-image: url("../images/fanfics/btn-left.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%; /* adjust arrow size inside circle */
+}
+
+/* RIGHT arrow image */
+.nav-next {
+  background-image: url("../images/fanfics/btn-right.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+
+.nav-arrow:hover {
+  transform: translateY(-2px);
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* Book container (using the open-book image as background) */
+.book {
+  position: relative;
+  width: 90%;
+  margin: 0 auto; 
+  aspect-ratio: 3 / 2; /* adjust if your book image is taller/wider */
+  background-image: url("../images/fanfics/open-book.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* explicitly remove any border/shadow around the book graphic */
+.book {
+  border: none;
+  box-shadow: none;
+}
+
+/* Each spread (pair of pages) */
+.spread {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* The actual comic pages drawn on top of the left/right paper area */
+.page {
+  position: absolute;
+  /* vertically center using transform instead of top+bottom so pages don't stick to the bottom */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36%;           /* page width relative to book; adjust if you want larger/smaller pages */
+  max-height: 80%;      /* avoid overflow inside the book image */
+}
+
+/* Left page position */
+.page-left {
+  left: 11%;
+}
+
+/* Right page position */
+.page-right {
+  right: 11%;
+}
+
+/* Show spread 1 or 2 depending on which radio is checked */
+#spread1:checked ~ .book-frame .spread-1 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#spread2:checked ~ .book-frame .spread-2 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hide prev arrow on first spread, next arrow on last spread */
+#spread1:checked ~ .book-frame .nav-prev {
+  visibility: hidden;
+}
+
+#spread2:checked ~ .book-frame .nav-next {
+  visibility: hidden;
+}
+
+/* Page indicator text */
+.page-indicator {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #3C2D7C;
+}
+
+.indicator {
+  display: none;
+}
+
+#spread1:checked ~ .page-indicator .indicator-1 {
+  display: inline;
+}
+
+#spread2:checked ~ .page-indicator .indicator-2 {
+  display: inline;
+}
+
+/* Optional: small-screen tweaks */
+@media (max-width: 700px) {
+  .nav-arrow {
+    font-size: 1.8rem;
+  }
+
+  .page {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46%;
+    max-height: 72%;
+  }
+}

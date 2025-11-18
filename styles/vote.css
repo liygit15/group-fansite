@@ -1,0 +1,202 @@
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-6px); } 
+    100% { transform: translateY(0px); }
+}
+
+
+@keyframes gradientMove {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); } 
+}
+
+/* body */
+body {
+    background-image:  
+    url("../images/vote/bg13.jpg");
+    background-size: cover;      
+    background-position: center; 
+}
+
+
+/* header*/
+#logo {
+    width: 15rem;
+}
+
+
+h1 {
+    font-family: "Gill Sans";
+    font-size: 2rem;
+    background: linear-gradient(90deg, #ee86ba, #8a2be2, #ff69b4);
+    background-size: 200%;
+    background-clip: text;   
+    -webkit-background-clip: text;
+    color: transparent;      
+    animation: gradientMove 3s infinite linear;
+}
+
+
+.pipe {
+    color: rgb(241, 234, 243);
+}
+
+a:hover {
+    color: #ff69b4; 
+}
+
+
+/* main */
+.vote-body {
+    border-radius: 50px;
+    max-width: 1200px; 
+    margin: 2rem auto; 
+
+}
+
+
+/* title gradientMove and add some icons*/
+.gradient-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #c82525, #8a2be2, #da17ad);
+    background-size: 200%;
+    background-clip: text;   
+    -webkit-background-clip: text;
+    color: transparent;      
+    animation: gradientMove 1s infinite linear;
+}
+
+
+#vote-title .gradient-text::before,
+#vote-title .gradient-text::after {
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-size: contain;        
+    background-position: center;    
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin: 0 6px;                    
+}
+
+#vote-title .gradient-text:first-child::before {
+    background-image: url('../images/vote/moon-nobg.jpg');
+}
+#vote-title .gradient-text:last-child::before {
+    background-image: url('../images/vote/cat-nobg.jpg');
+}
+#vote-title .gradient-text:last-child::after {
+    background-image: url('../images/vote/heart-nobg.jpg');
+}
+
+
+/* candidate cards */
+.candidate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.6rem;
+    border: 5px solid #f5f4f5;
+    border-radius: 10px;
+    background-color: rgb(239, 216, 234);
+    box-shadow:
+        0 2px 4px rgba(0,0,0,0.3),
+        0 6px 15px rgba(0,0,0,0.2);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.candidate:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow:
+        0 4px 10px rgba(255, 20, 147, 0.4),
+        0 8px 20px rgba(138, 43, 226, 0.3);
+    border-color: #992b74;
+}
+
+
+label img {
+    width: 100%;
+    height:100%;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+}
+
+
+.sailor-name {
+    color: rgb(129, 13, 123);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+/* form: layout grid */
+fieldset {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    border-radius: 30px;
+    border-style:dashed;
+    border: 8px dashed #ebaed7;
+    gap:1rem;
+}
+
+
+button {
+    font-size: 1.3rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: rgb(225, 148, 221);
+    margin: 1rem;
+    box-shadow: 
+        0 2px 4px rgba(0,0,0,0.4),
+        0 6px 15px rgba(0,0,0,0.3);
+    display: inline-block;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+
+/* section  result layout: grid  */
+#result {
+    border: 8px dashed #ebaed7;
+    border-radius: 30px;
+    background-color:#fff0fa;
+    margin: 0px;
+    padding: 0px;
+    width: 99%;
+}
+
+
+#result-title {
+    font-size: 2rem;
+    margin:auto;
+    font-weight: bolder;
+}
+
+
+#results-list {
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin:1rem;
+}
+
+
+.vote-result {
+    color:rgb(83, 23, 62);
+    padding:0.3rem;
+    border-radius: 30px;
+    border: 3px dashed #ebaed7;
+    background-color: rgb(239, 203, 233);
+    box-shadow: 
+        0 2px 4px rgba(0,0,0,0.4),
+        0 6px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    margin: 0.5rem;
+}

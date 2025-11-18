@@ -1,30 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dog Fansite</title>
+  <title>Sailor Moon gallery page</title>
+  <!-- Link to Style Sheet -->
+  <link href="../styles/style.css" rel="stylesheet" />
+  <link href="../styles/gallery.css" rel="stylesheet" />
 </head>
-<body>
+
+<body class="container">
   <header>
-    <h1>Dog Fansite</h1>
+    <h1>The Sailor Moon Gallery </h1>
     <nav>
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="facts.html">Dog Facts</a></li>
-        <li><a href="gallery.html">Dog Gallery</a></li>
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+        <li>|</li>
+        <li>
+          <a href="facts.html">Sailor Moon Facts</a>
+        </li>
+        <li>|</li>
+        <li>
+          <a href="gallery.html"><strong>Sailor Moon Gallery</strong></a>
+        </li>
+        <li>|</li>
+        <li>
+          <a href="vote.html">Sailor Moon Vote</a>
+        </li>
+        <li>|</li>
+        <li>
+          <a href="power.html">Sailor Moon Power</a>
+        </li>
       </ul>
     </nav>
   </header>
   <main>
-    <section>
-      <h2>Gallery of images</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla ad vel earum odio adipisci ullam explicabo, deserunt rerum odit similique ea enim natus officia facilis vero, eaque aliquam, eveniet eum.</p>
-    </section>
+    <h2>🤍 Gallery of Sailor Friends 🤍</h2>
+
+    <div class="gallery">
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="card-header">Sailor Usagi</div>
+        <div class="card-image">
+          <div class="img-swap" tabindex="0">
+            <img class="img-front" src="../images/gallery/rabbit_u_li.png" alt="Sailor Li Yan" />
+            <img class="img-back" src="../images/gallery/usagi_and_li.png" alt="" aria-hidden="true">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-row"><strong>Alias(es)</strong><span>Usagi Tsukino</span></div>
+          <div class="card-row"><strong>Residence</strong><span>Tokyo, Japan</span></div>
+          <div class="card-row"><strong>Gender</strong><span>Female</span></div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="card-header">Sailor Theseus</div>
+        <div class="card-image">
+          <div class="img-swap" tabindex="0">
+            <img class="img-front" src="../images/gallery/Theseus_Ekat_1.png" alt="Sailor Theseus" />
+            <img class="img-back" src="../images/gallery/Theseus_and_Ekaterina.png" alt="" aria-hidden="true">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-row"><strong>Alias(es)</strong><span>Theseus</span></div>
+          <div class="card-row"><strong>Residence</strong><span>Moscow, Russia</span></div>
+          <div class="card-row"><strong>Gender</strong><span>Male</span></div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="card-header">Sailor Fire</div>
+        <div class="card-image">
+          <div class="img-swap" tabindex="0">
+            <img class="img-front" src="../images/gallery/Fire_Alicefriends.png" alt="Sailor Fire">
+            <img class="img-back" src="../images/gallery/Fire_and_Alice.png" alt="" aria-hidden="true">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-row"><strong>Alias(es)</strong><span>Fire Hino</span></div>
+          <div class="card-row"><strong>Residence</strong><span>Tokyo, Japan</span></div>
+          <div class="card-row"><strong>Gender</strong><span>Male</span></div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="card-header">Sailor Jingle</div>
+        <div class="card-image">
+          <div class="img-swap" tabindex="0">
+            <img class="img-front" src="../images/gallery/Jingle_princess.png" alt="Sailor Jingle" />
+            <img class="img-back" src="../images/gallery/Sophie_and_jingle.png" alt="" aria-hidden="true">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-row"><strong>Alias(es)</strong><span>Jingle Kino</span></div>
+          <div class="card-row"><strong>Residence</strong><span>Athens, Greece</span></div>
+          <div class="card-row"><strong>Gender</strong><span>Female</span></div>
+        </div>
+      </article>
+
+    </div>
   </main>
+
   <footer>
-    &copy;2025 Ada Developers Academy Cohort 24
+    <p>&copy; 2025 Team E.L.S.A. — Made with 💜 and Moonlight</p>
   </footer>
+
 </body>
+
 </html>

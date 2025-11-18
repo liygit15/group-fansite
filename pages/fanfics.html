@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sailor Moon facts page</title>
+    <!-- Link to Style Sheet -->
+    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../styles/fanfics.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>🌙 Sailor Moon Facts ✨</h1>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="has-dropdown">
+            <a href="facts.html" class="active">Sailor Moon Facts</a>
+            <ul class="dropdown">
+              <li>
+                <a href="fanfics.html">Fanfics</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="gallery.html">Sailor Moon Gallery</a>
+          </li>
+          <li>
+            <a href="vote.html">Sailor Moon Vote</a>
+          </li>
+          <li>
+            <a href="power.html">Sailor Moon Power</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="comic-wrapper">
+      <!-- Radio buttons control which spread is visible -->
+      <input type="radio" name="spread" id="spread1" checked>
+      <input type="radio" name="spread" id="spread2">
+      <section class="book-frame">
+        <h2 class="sr-only">Fanfic Comic</h2>
+        <!-- Prev arrow (left side) -->
+        <label for="spread1" class="nav-arrow nav-prev"></label>
+        <!-- Book with open-book image as background -->
+        <div class="book">
+          <!-- Spread 1: pages 1 & 2 -->
+          <div class="spread spread-1">
+            <img class="page page-left"
+              src="../images/fanfics/page1.png"
+              alt="Comic page 1">
+            <img class="page page-right"
+              src="../images/fanfics/page2.png"
+              alt="Comic page 2">
+          </div>
+          <!-- Spread 2: pages 3 & 4 -->
+          <div class="spread spread-2">
+            <img class="page page-left"
+              src="../images/fanfics/page3.png"
+              alt="Comic page 3">
+            <img class="page page-right"
+              src="../images/fanfics/page4.png"
+              alt="Comic page 4">
+          </div>
+        </div>
+        <!-- Next arrow (right side) -->
+        <label for="spread2" class="nav-arrow nav-next"></label>
+      </section>
+      <p class="page-indicator">
+        <span class="indicator indicator-1">Pages 1–2</span>
+        <span class="indicator indicator-2">Pages 3–4</span>
+      </p>
+    </main>
+  </body>
+</html>
